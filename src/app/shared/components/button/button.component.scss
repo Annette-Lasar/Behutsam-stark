@@ -1,0 +1,10 @@
+@import '../../../../scss-styles/variables.scss';
+@import '../../../../scss-styles/mixins.scss';
+
+button {
+    border: $signal-color 1px solid;
+    padding: 0.5em 1em;
+    background-color: $signal-color;
+    cursor: pointer;
+    color: $white;
+}

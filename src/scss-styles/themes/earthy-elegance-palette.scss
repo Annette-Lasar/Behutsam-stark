@@ -1,0 +1,198 @@
+@use "@angular/material" as mat;
+
+// Primary color palette:
+$earthy-elegance-green-palette: mat.define-palette(
+  (
+    50: #f7f7f0,
+    100: #e3e0c6,
+    200: #cfc8a3,
+    300: #bbb07f,
+    400: #a9a06b,
+    500: #999471, // Hauptfarbe
+    600: #8a815a,
+    700: #72684a,
+    800: #5a503a,
+    900: #413929,
+    contrast: (
+      50: rgba(0, 0, 0, 0.87),
+      100: rgba(0, 0, 0, 0.87),
+      200: rgba(0, 0, 0, 0.87),
+      300: rgba(0, 0, 0, 0.87),
+      400: rgba(0, 0, 0, 0.87),
+      500: rgba(255, 255, 255, 1), // Weiß
+      600: rgba(255, 255, 255, 1),
+      700: rgba(255, 255, 255, 1),
+      800: rgba(255, 255, 255, 1),
+      900: rgba(255, 255, 255, 1),
+    )
+  )
+);
+
+// Secondary color palette
+$earthy-elegance-lightbeige-palette: mat.define-palette(
+  (
+    50: #f9f7f1,   
+    100: #f2eee2,  
+    200: #e8e2c9,  
+    300: #ded6b0,  
+    400: #d8cda1,  
+    500: #dfd3bc,  
+    600: #c2b39d,  
+    700: #a49a82,  
+    800: #867f67,  
+    900: #605c4d,  
+    contrast: (
+      50: rgba(0, 0, 0, 0.87),  
+      100: rgba(0, 0, 0, 0.87),
+      200: rgba(0, 0, 0, 0.87),
+      300: rgba(0, 0, 0, 0.87),
+      400: rgba(0, 0, 0, 0.87),
+      500: rgba(0, 0, 0, 0.87),  
+      600: rgba(255, 255, 255, 1),  
+      700: rgba(255, 255, 255, 1),
+      800: rgba(255, 255, 255, 1),
+      900: rgba(255, 255, 255, 1),
+    )
+  )
+);
+
+
+// Accent color palette
+$earthy-elegance-darkgreen-palette: mat.define-palette(
+  (
+    50: #e8e9dc,
+    100: #d1d3b5,
+    200: #babb8d,
+    300: #a4a365,
+    400: #8e8c44,
+    500: #4e502f, // Hauptfarbe
+    600: #797732,
+    700: #646124,
+    800: #4f4c19,
+    900: #3a370f,
+    contrast: (
+      50: rgba(0, 0, 0, 0.87),
+      100: rgba(0, 0, 0, 0.87),
+      200: rgba(0, 0, 0, 0.87),
+      300: rgba(0, 0, 0, 0.87),
+      400: rgba(0, 0, 0, 0.87),
+      500: rgba(255, 255, 255, 1),
+      600: rgba(255, 255, 255, 1),
+      700: rgba(255, 255, 255, 1),
+      800: rgba(255, 255, 255, 1),
+      900: rgba(255, 255, 255, 1),
+    )
+  )
+);
+
+// Warning color palette
+$earthy-elegance-red-palette: mat.define-palette((
+  50: #fde8e8,
+  100: #f9c5c5,
+  200: #f5a1a1,
+  300: #f07d7d,
+  400: #ec6161,
+  500: #990000,  // Hauptfarbe aus dem ursprünglichen Logo
+  600: #8a0000,
+  700: #7a0000,
+  800: #6b0000,
+  900: #4c0000,
+  contrast: (
+    50: rgba(0, 0, 0, 0.87),
+    100: rgba(0, 0, 0, 0.87),
+    200: rgba(0, 0, 0, 0.87),
+    300: rgba(0, 0, 0, 0.87),
+    400: rgba(255, 255, 255, 1),
+    500: rgba(255, 255, 255, 1),
+    600: rgba(255, 255, 255, 1),
+    700: rgba(255, 255, 255, 1),
+    800: rgba(255, 255, 255, 1),
+    900: rgba(255, 255, 255, 1),
+  )
+));
+
+
+// Signal color palette
+$earthy-elegance-brown-palette: mat.define-palette(
+  (
+    50: #fff8f0,
+    100: #ffe3c9,
+    200: #ffd19f,
+    300: #ffbf74,
+    400: #ffad50,
+    500: #c6924e, // Hauptfarbe
+    600: #b56b30,
+    700: #8c5425,
+    800: #643c19,
+    900: #3b240f,
+    contrast: (
+      50: rgba(0, 0, 0, 0.87),
+      100: rgba(0, 0, 0, 0.87),
+      200: rgba(0, 0, 0, 0.87),
+      300: rgba(0, 0, 0, 0.87),
+      400: rgba(0, 0, 0, 0.87),
+      500: rgba(0, 0, 0, 0.87),
+      600: rgba(255, 255, 255, 1),
+      700: rgba(255, 255, 255, 1),
+      800: rgba(255, 255, 255, 1),
+      900: rgba(255, 255, 255, 1),
+    )
+  )
+);
+
+// Succes color palette
+$earthy-elegance-lightgreen-palette: mat.define-palette(
+  (
+    50: #f2f7f0,
+    100: #dce9d8,
+    200: #c5dbbf,
+    300: #aeca9f,
+    400: #92b683,
+    500: #73996e, // Hauptfarbe
+    600: #63875b,
+    700: #4e6e4a,
+    800: #3a5638,
+    900: #283b26,
+    contrast: (
+      50: rgba(0, 0, 0, 0.87),
+      100: rgba(0, 0, 0, 0.87),
+      200: rgba(0, 0, 0, 0.87),
+      300: rgba(0, 0, 0, 0.87),
+      400: rgba(0, 0, 0, 0.87),
+      500: rgba(255, 255, 255, 1),
+      600: rgba(255, 255, 255, 1),
+      700: rgba(255, 255, 255, 1),
+      800: rgba(255, 255, 255, 1),
+      900: rgba(255, 255, 255, 1),
+    )
+  )
+);
+
+
+// Info color palette
+$earthy-elegance-beige-palette: mat.define-palette(
+  (
+    50: #f9f7f5,
+    100: #ece7de,
+    200: #ddd4c6,
+    300: #cfc0ad,
+    400: #c3b399,
+    500: #b5a891, // Hauptfarbe
+    600: #a5977b,
+    700: #8c7f66,
+    800: #726754,
+    900: #4f483a,
+    contrast: (
+      50: rgba(0, 0, 0, 0.87),
+      100: rgba(0, 0, 0, 0.87),
+      200: rgba(0, 0, 0, 0.87),
+      300: rgba(0, 0, 0, 0.87),
+      400: rgba(0, 0, 0, 0.87),
+      500: rgba(0, 0, 0, 0.87),
+      600: rgba(255, 255, 255, 1),
+      700: rgba(255, 255, 255, 1),
+      800: rgba(255, 255, 255, 1),
+      900: rgba(255, 255, 255, 1),
+    )
+  )
+);

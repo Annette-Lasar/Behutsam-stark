@@ -1,0 +1,25 @@
+@use "@angular/material" as mat;
+@use "./earthy-elegance-palette.scss" as palette;
+
+@include mat.core();
+
+$earthy-elegance-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: palette.$earthy-elegance-green-palette,
+      secondary: palette.$earthy-elegance-lightbeige-palette,
+      accent: palette.$earthy-elegance-darkgreen-palette,
+      signal: palette.$earthy-elegance-brown-palette,
+      warn: palette.$earthy-elegance-red-palette,
+      success: palette.$earthy-elegance-lightgreen-palette,
+      info: palette.$earthy-elegance-beige-palette,
+    ),
+  )
+);
+
+@include mat.core-theme($earthy-elegance-theme);
+
+@include mat.button-theme($earthy-elegance-theme);
+@include mat.menu-theme($earthy-elegance-theme);
+
+@include mat.all-component-themes($earthy-elegance-theme);

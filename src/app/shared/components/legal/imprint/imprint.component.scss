@@ -1,0 +1,15 @@
+@import "../../../../../scss-styles/variables.scss";
+@import "../../../../../scss-styles/mixins.scss";
+
+section {
+  min-height: calc(100vh - $mobile-header-height - $mobile-footer-height);
+  padding: 1em 0.5em;
+  background-color: $primary-color;
+  color: $secondary-color;
+  p {
+    font-size: 0.9rem;
+  }
+  .block {
+    margin: 0 0 1em;
+  }
+}

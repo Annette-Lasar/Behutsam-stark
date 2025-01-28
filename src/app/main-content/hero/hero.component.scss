@@ -1,0 +1,82 @@
+@use "@angular/material" as mat;
+@use "../../../scss-styles/themes/earthy-elegance-palette.scss" as palette;
+@import "../../../scss-styles/variables.scss";
+@import "../../../scss-styles/mixins.scss";
+
+section {
+  height: calc(100vh - $mobile-header-height - $mobile-footer-height);
+}
+
+.inner-section-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50% 50%;
+  grid-template-areas:
+    "image"
+    "text";
+  height: 100%;
+  .plain-box {
+    display: none;
+  }
+  .image-box {
+    grid-area: image;
+    background-image: url("../../../assets/img/hamburg_bach.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .text-box {
+    @include flex-container($direction: column, $justify: center, $gap: 1.5em);
+    width: 100%;
+    grid-area: text;
+    padding: 1em 0.5em;
+    background-color: $secondary-color;
+    p {
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      text-align: center;
+      line-height: 1.2;
+      color: $primary-color;
+    }
+  }
+}
+
+@media (min-width: 50em) {
+  .inner-section-wrapper {
+    // height: 100%;
+    // @include flex-container();
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "plain image"
+      "plain image";
+    .plain-box {
+      grid-area: plain;
+      width: 100%;
+      height: 100%;
+      @include flex-container();
+      background-color: $primary-color;
+    }
+    .image-box {
+      grid-area: image;
+    }
+    .text-box {
+      @include flex-container($direction: column, $justify: space-evenly);
+      height: 45%;
+      width: 60%;
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.custom-signal-button {
+  background-color: mat.get-color-from-palette(
+    palette.$earthy-elegance-brown-palette,
+    500
+  );
+  color: mat.get-contrast-color-from-palette(
+    palette.$earthy-elegance-brown-palette,
+    500
+  );
+}

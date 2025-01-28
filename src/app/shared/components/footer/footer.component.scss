@@ -1,0 +1,26 @@
+@import "../../../../scss-styles/variables.scss";
+@import "../../../../scss-styles/mixins.scss";
+
+footer {
+  height: $mobile-footer-height;
+  background-color: $secondary-color;
+}
+
+.inner-footer-wrapper {
+  @include flex-container();
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 0.5em;
+  height: 100%;
+  color: $accent-color;
+  p {
+    font-size: x-small;
+  }
+  .legal-pages {
+    @include flex-container($direction: column, $align: flex-end);
+    height: 50%;
+    a {
+      color: $accent-color;
+    }
+  }
+}

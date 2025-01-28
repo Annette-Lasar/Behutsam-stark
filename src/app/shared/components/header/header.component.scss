@@ -1,0 +1,69 @@
+@import "../../../../scss-styles/variables.scss";
+@import "../../../../scss-styles/mixins.scss";
+
+header {
+  height: $mobile-header-height;
+  background-color: $accent-color;
+}
+
+.inner-header-wrapper {
+  @include flex-container();
+  margin: 0 auto;
+  padding: 0 0.5em;
+  max-width: 1024px;
+  height: 100%;
+  color: $secondary-color;
+  .logo-wrapper {
+    height: 60%;
+    img {
+      height: 100%;
+      filter: invert(94%) sepia(6%) saturate(885%) hue-rotate(353deg)
+        brightness(92%) contrast(88%);
+    }
+  }
+  .page-title {
+    margin: 0;
+  }
+}
+
+.menu-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  .burger {
+    position: relative;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .line {
+      width: 100%;
+      height: 3px;
+      background-color: $secondary-color;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+  }
+
+  &.open .burger {
+    .line:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+
+    .line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .line:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }
+}

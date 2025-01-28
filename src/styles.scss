@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+@import './scss-styles/reset_stylesheet.scss';
+@import './scss-styles/variables.scss';
+@import './scss-styles/mixins.scss';
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: $secondary-color;
+}
+
+h1 {
+    margin: 1.5em 0 1em;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    font-weight: 700;
+}
+
+/* * ::-webkit-scrollbar {
+    scrollbar-width: 16px;
+    scrollbar-track-color: $accent-color;
+    scrollbar-color: $secondary-color;
+} */
+
+*::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: $secondary-color;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: $primary-color;
+    border-radius: 10px;
+    border: $primary-color 3px solid;
+  }
+
+
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+
+p {
+    margin: 0;
+}

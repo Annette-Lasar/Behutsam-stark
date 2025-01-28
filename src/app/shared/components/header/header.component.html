@@ -1,0 +1,32 @@
+<header>
+  <div class="inner-header-wrapper">
+    <div class="logo-wrapper">
+      <a routerLink="/home">
+        <img src="assets/icons/tree.png" alt="Behutsam-stark-Logo" />
+      </a>
+    </div>
+    <p class="page-title">Behutsam-stark</p>
+    <button
+      mat-button
+      [matMenuTriggerFor]="menu"
+      class="menu-button"
+      [class.open]="menuOpened"
+      (click)="toggleMenu()"
+    >
+      <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </button>
+    <mat-menu
+      #menu="matMenu"
+      (opened)="menuOpened = true"
+      (closed)="menuOpened = false"
+    >
+      <button mat-menu-item>Über mich</button>
+      <button mat-menu-item>Meine Angebote</button>
+      <button mat-menu-item>Kontakt</button>
+    </mat-menu>
+  </div>
+</header>

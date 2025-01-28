@@ -1,0 +1,25 @@
+@use "@angular/material" as mat;
+@use "../../../scss-styles/themes/earthy-elegance-palette.scss" as palette;
+@import "../../../scss-styles/variables.scss";
+@import "../../../scss-styles/mixins.scss";
+
+section {
+  background-color: mat.get-color-from-palette(
+    palette.$earthy-elegance-darkgreen-palette,
+    500
+  );
+}
+
+.section-wrapper {
+    padding: 3em 1em 4.5em;
+  color: mat.get-color-from-palette(
+    palette.$earthy-elegance-lightbeige-palette,
+    500
+  );
+  h1 {
+    text-align: center;
+  }
+  .quote-source {
+    margin: 1em 0 0;
+  }
+}

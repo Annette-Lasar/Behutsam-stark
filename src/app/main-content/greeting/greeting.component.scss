@@ -1,0 +1,68 @@
+@use "@angular/material" as mat;
+@use "../../../scss-styles/themes/earthy-elegance-palette.scss" as palette;
+@import "../../../scss-styles/variables.scss";
+@import "../../../scss-styles/mixins.scss";
+
+.section-wrapper {
+  padding: 0 0 2em;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "image"
+    "text";
+  background-color: mat.get-color-from-palette(
+    palette.$earthy-elegance-lightbeige-palette,
+    500
+  );
+ 
+  .image-wrapper {
+    grid-area: image;
+  }
+  .text-wrapper {
+    grid-area: text;
+    padding: 1em 0.5em;
+    text-align: center;
+    line-height: 1.1;
+    background-color: mat.get-color-from-palette(
+      palette.$earthy-elegance-green-palette,
+      500
+    );
+    color: mat.get-color-from-palette(
+      palette.$earthy-elegance-lightbeige-palette,
+      500
+    );
+    .custom-signal-button {
+      margin: 1.5em 0 0;
+      background-color: mat.get-color-from-palette(
+        palette.$earthy-elegance-brown-palette,
+        500
+      );
+      color: mat.get-contrast-color-from-palette(
+        palette.$earthy-elegance-brown-palette,
+        500
+      );
+    }
+  }
+}
+
+@media (min-width: 50em) {
+  .section-wrapper {
+    padding: 2em 0;
+    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    .text-wrapper {
+      padding: 1em;
+      grid-column: 2/4;
+      grid-row: 1/3;
+      z-index: 2;
+    }
+    .image-wrapper {
+      grid-column: 1/3;
+      grid-row: 2/4;
+      top: 50%;
+      left: 0;
+    }
+  }
+}

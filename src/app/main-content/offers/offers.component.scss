@@ -1,0 +1,88 @@
+@use "@angular/material" as mat;
+@use "../../../scss-styles/themes/earthy-elegance-palette.scss" as palette;
+@import "../../../scss-styles/variables.scss";
+@import "../../../scss-styles/mixins.scss";
+
+.section-wrapper {
+    position: relative; // später wieder löschen
+  color: mat.get-color-from-palette(
+    palette.$earthy-elegance-darkgreen-palette,
+    500
+  );
+}
+
+h1 {
+  text-align: center;
+}
+
+.post-it {
+    margin: 0 auto;
+    width: 300px;
+    position: absolute;
+    top: -112px;
+    z-index: 2;
+    text-align: center;
+    .info {
+        position: absolute; 
+        top: 44px;
+        left: 24px;
+        width: 70%;
+        transform: rotate(-11deg);
+        line-height: 1.1;
+    }
+}
+
+article {
+  margin: 3em 0.3em;
+  text-align: center;
+  border: mat.get-color-from-palette(
+      palette.$earthy-elegance-darkgreen-palette,
+      500
+    )
+    1px solid;
+    border-radius: 12px;
+  figure {
+    text-align: center;
+    img {
+      height: 200px;
+    }
+    figcaption {
+      margin: 0.5em 0;
+      font-weight: 700;
+    }
+  }
+  .custom-signal-button {
+    margin: 1.5em 0;
+    background-color: mat.get-color-from-palette(
+      palette.$earthy-elegance-brown-palette,
+      500
+    );
+    color: mat.get-contrast-color-from-palette(
+      palette.$earthy-elegance-brown-palette,
+      500
+    );
+  }
+}
+
+
+@media (min-width: 50em) {
+    .post-it { // später wieder löschen
+        margin: 0 auto;
+        width: 300px;
+        position: absolute;
+        top: -112px;
+        text-align: center;
+        .info {
+            position: absolute; 
+            top: 44px;
+            left: 24px;
+            width: 70%;
+            transform: rotate(-11deg);
+            line-height: 1.1;
+        }
+    }
+
+    .article-wrapper {
+        @include flex-container();
+    }
+}
