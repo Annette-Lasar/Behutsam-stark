@@ -1,0 +1,76 @@
+@use "@angular/material" as mat;
+@use "../../../scss-styles/themes/earthy-elegance-palette.scss" as palette;
+@import "../../../scss-styles/variables.scss";
+@import "../../../scss-styles/mixins.scss";
+
+section {
+  background-color: mat.get-color-from-palette(
+    palette.$earthy-elegance-green-palette,
+    500
+  );
+}
+
+.section-wrapper {
+  padding: 3em 0 4.5em;
+  color: mat.get-color-from-palette(
+    palette.$earthy-elegance-lightbeige-palette,
+    500
+  );
+  h1 {
+    text-align: center;
+  }
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    .carousel-item {
+      display: none;
+      text-align: center;
+      padding: 1em;
+      font-size: 1.2em;
+    }
+    .carousel-item.active {
+      display: block;
+    }
+    .testimonial {
+      margin: 0 auto;
+      height: 400px;
+      width: 200px;
+      .quotation-mark-wrapper {
+        text-align: left;
+        img {
+          height: 32px;
+          filter: invert(91%) sepia(20%) saturate(249%) hue-rotate(355deg)
+            brightness(94%) contrast(85%);
+        }
+      }
+      blockquote {
+        font-size: 0.9rem;
+      }
+      p {
+        text-align: right;
+      }
+    }
+    button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    button:first-of-type {
+      left: 10px;
+    }
+    button:last-of-type {
+      right: 10px;
+    }
+    .arrow {
+      color: mat.get-color-from-palette(
+        palette.$earthy-elegance-lightbeige-palette,
+        500
+      );
+    }
+  }
+}

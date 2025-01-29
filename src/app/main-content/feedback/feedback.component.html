@@ -1,0 +1,20 @@
+<section>
+  <div class="section-wrapper">
+    <h1>Stimmen meiner Kunden</h1>
+    <div class="carousel">
+      @for(quote of testimonials; track quote; let i = $index) {
+      <div class="carousel-item" [class.active]="i === currentIndex">
+        <div class="testimonial">
+            <div class="quotation-mark-wrapper">
+                <img src="assets/icons/quotation_mark.svg" alt="">
+            </div>
+          <blockquote>{{ quote.text }}</blockquote>
+          <p>- {{ quote.author }}</p>
+        </div>
+      </div>
+      }
+      <button class="arrow" (click)="prev()">&#10094;</button>
+      <button class="arrow" (click)="next()">&#10095;</button>
+    </div>
+  </div>
+</section>

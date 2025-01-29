@@ -1,0 +1,16 @@
+@use "@angular/material" as mat;
+@use "../../../../scss-styles/themes/earthy-elegance-palette.scss" as palette;
+@import "../../../../scss-styles/variables.scss";
+@import "../../../../scss-styles/mixins.scss";
+
+form {
+  /*   color: mat.get-color-from-palette(
+    palette.$earthy-elegance-lightbeige-palette,
+    500
+  ); */
+  padding: 1em 0;
+  mat-form-field {
+    width: 100%;
+    margin: 0 0 2em;
+  }
+}

@@ -1,3 +1,5 @@
+@use "@angular/material" as mat;
+@use "../../../../scss-styles/themes/earthy-elegance-palette.scss" as palette;
 @import "../../../../scss-styles/variables.scss";
 @import "../../../../scss-styles/mixins.scss";
 
@@ -66,4 +68,11 @@ header {
       transform: translateY(-9px) rotate(-45deg);
     }
   }
+}
+
+.menu-item {
+  color: mat.get-color-from-palette(
+    palette.$earthy-elegance-darkgreen-palette,
+    500
+  );
 }

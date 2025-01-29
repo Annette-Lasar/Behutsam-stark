@@ -1,0 +1,46 @@
+<section>
+  <div class="section-wrapper">
+    <img src="../../../assets/icons/newsletter.png" alt="" />
+    <h1>Wissen und Inspiration für dich!</h1>
+    <div class="text-wrapper">
+      <p>Beispielhafte Themen aus meinem Newsletterangebot:</p>
+      <ul>
+        <li>
+          Wie die Polyvagaltheorie dir helfen kann, dich selbst besser zu
+          verstehen.
+        </li>
+        <li>Drei einfache Übungen für mehr innere Stabilität im Alltag.</li>
+      </ul>
+
+      <form
+        [formGroup]="newsletterForm"
+        (ngSubmit)="onSubmit()"
+        class="newsletter-form"
+      >
+        <mat-form-field appearance="outline" class="full-width form-field">
+          <mat-label>E-Mail-Adresse</mat-label>
+          <input
+            matInput
+            placeholder="mein-name@beispiel.com"
+            formControlName="email"
+            required
+          />
+          @if(emailControl.invalid && emailControl.touched){
+          <mat-error>
+            {{ errorMessage }}
+          </mat-error>
+          }
+        </mat-form-field>
+
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="newsletterForm.invalid"
+        >
+          Newsletter abonnieren
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

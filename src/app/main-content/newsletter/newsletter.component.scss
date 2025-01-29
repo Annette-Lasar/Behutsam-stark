@@ -1,0 +1,54 @@
+@use "@angular/material" as mat;
+@use "../../../scss-styles/themes/earthy-elegance-palette.scss" as palette;
+@import "../../../scss-styles/variables.scss";
+@import "../../../scss-styles/mixins.scss";
+
+section {
+  padding: 3em 0 4.5em;
+}
+
+.section-wrapper {
+  position: relative;
+  padding: 2em 0.5em 5em;
+  color: mat.get-color-from-palette(
+    palette.$earthy-elegance-darkgreen-palette,
+    500
+  );
+  img {
+    position: absolute;
+    height: 96px;
+    right: 10%;
+    bottom: 12px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+  p {
+    line-height: 1.4;
+  }
+  ul {
+    padding: 0 0 0 1.5em;
+    list-style-type: disc;
+    li {
+      line-height: 1.4;
+      font-style: italic;
+    }
+  }
+  .text-wrapper {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 450px;
+  }
+}
+
+form {
+  margin: 2em auto;
+  @include flex-container($direction: column, $justify: center, $gap: 12px);
+  .form-field {
+    width: 100%;
+    input {
+        height: 40%;
+    }
+  }
+}

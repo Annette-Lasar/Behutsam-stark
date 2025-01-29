@@ -1,0 +1,28 @@
+@use "@angular/material" as mat;
+@use "../../../scss-styles/themes/earthy-elegance-palette.scss" as palette;
+@import "../../../scss-styles/variables.scss";
+@import "../../../scss-styles/mixins.scss";
+
+section {
+  background-color: mat.get-color-from-palette(
+    palette.$earthy-elegance-darkgreen-palette,
+    500
+  );
+}
+
+.section-wrapper {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 3em 0.5em 4.5em;
+  color: mat.get-color-from-palette(
+    palette.$earthy-elegance-lightbeige-palette,
+    500
+  );
+  h1 {
+    text-align: center;
+  }
+  .text-wrapper {
+    margin: 0 0 2em;
+  }
+}

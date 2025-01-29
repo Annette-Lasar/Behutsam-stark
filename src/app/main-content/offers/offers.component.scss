@@ -4,7 +4,7 @@
 @import "../../../scss-styles/mixins.scss";
 
 .section-wrapper {
-    position: relative; // später wieder löschen
+  position: relative; // später wieder löschen
   color: mat.get-color-from-palette(
     palette.$earthy-elegance-darkgreen-palette,
     500
@@ -16,20 +16,21 @@ h1 {
 }
 
 .post-it {
-    margin: 0 auto;
-    width: 300px;
+  margin: 0 auto;
+  width: 300px;
+  position: absolute;
+  top: -112px;
+  z-index: 2;
+  text-align: center;
+  .info {
     position: absolute;
-    top: -112px;
-    z-index: 2;
-    text-align: center;
-    .info {
-        position: absolute; 
-        top: 44px;
-        left: 24px;
-        width: 70%;
-        transform: rotate(-11deg);
-        line-height: 1.1;
-    }
+    top: 44px;
+    left: 24px;
+    width: 70%;
+    transform: rotate(-11deg);
+    line-height: 1.1;
+    font-size: 0.8rem;
+  }
 }
 
 article {
@@ -40,7 +41,7 @@ article {
       500
     )
     1px solid;
-    border-radius: 12px;
+  border-radius: 12px;
   figure {
     text-align: center;
     img {
@@ -64,25 +65,25 @@ article {
   }
 }
 
-
 @media (min-width: 50em) {
-    .post-it { // später wieder löschen
-        margin: 0 auto;
-        width: 300px;
-        position: absolute;
-        top: -112px;
-        text-align: center;
-        .info {
-            position: absolute; 
-            top: 44px;
-            left: 24px;
-            width: 70%;
-            transform: rotate(-11deg);
-            line-height: 1.1;
-        }
+  .post-it {
+    // später wieder löschen
+    margin: 0 auto;
+    width: 300px;
+    position: absolute;
+    top: -112px;
+    text-align: center;
+    .info {
+      position: absolute;
+      top: 44px;
+      left: 24px;
+      width: 70%;
+      transform: rotate(-11deg);
+      line-height: 1.1;
     }
+  }
 
-    .article-wrapper {
-        @include flex-container();
-    }
+  .article-wrapper {
+    @include flex-container();
+  }
 }

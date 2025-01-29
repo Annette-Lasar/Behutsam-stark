@@ -3,12 +3,12 @@ import {MatButtonModule} from '@angular/material/button';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'best-greeting',
+  selector: 'best-about',
   standalone: true,
   imports: [MatButtonModule, RouterLink],
-  templateUrl: './greeting.component.html',
-  styleUrl: './greeting.component.scss'
+  templateUrl: './about.component.html',
+  styleUrl: './about.component.scss'
 })
-export class GreetingComponent {
+export class AboutComponent {
 
 }

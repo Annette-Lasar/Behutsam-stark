@@ -20,13 +20,24 @@
       </div>
     </button>
     <mat-menu
+      class="main-menu"
       #menu="matMenu"
       (opened)="menuOpened = true"
       (closed)="menuOpened = false"
     >
-      <button mat-menu-item>Über mich</button>
-      <button mat-menu-item>Meine Angebote</button>
-      <button mat-menu-item>Kontakt</button>
+      <button class="menu-item" routerLink="/home" mat-menu-item>Start</button>
+      <button class="menu-item" routerLink="/about" mat-menu-item>Über mich</button>
+      <button class="menu-item" mat-menu-item [matMenuTriggerFor]="offers">Meine Angebote</button>
+      <button class="menu-item" mat-menu-item>Preisrechner</button>
+      <button class="menu-item" mat-menu-item>Newsletter</button>
+      <button class="menu-item" mat-menu-item>Kontakt</button>
+    </mat-menu>
+    <mat-menu #offers="matMenu">
+      <button class="menu-item" mat-menu-item>Traumasensibles Training</button>
+      <button class="menu-item" mat-menu-item>Supervision & Workshops</button>
+      <button class="menu-item" mat-menu-item>1 : 1-Coaching</button>
     </mat-menu>
   </div>
 </header>
+
+

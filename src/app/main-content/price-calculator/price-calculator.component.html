@@ -1,0 +1,49 @@
+<section>
+  <div class="section-wrapper">
+    <div class="text-wrapper">
+      <h1>Was bist du dir wert?</h1>
+      <p>
+        Die Arbeit an deiner Person ist ein Reifungsprozess. Reifung braucht
+        Zeit. Gute Arbeit hat ihren Preis &mdash; aber auch einen Wert. Wie viel
+        bist du bereit, in dich und dein Vorankommen zu investieren? Mithilfe
+        des Schiebers kannst du den Preis für deine Sitzungen festlegen. Je mehr
+        Stunden du auf einmal buchst, umso günstiger wird es für dich.
+      </p>
+    </div>
+    <div class="slider-wrapper">
+      <input
+        type="range"
+        min="1"
+        max="65"
+        step="1"
+        [(ngModel)]="currentlySelectedHours"
+        (input)="updatePrice()"
+      />
+    </div>
+    <mat-card class="calculation-box">
+      <mat-card-content>
+        <h2>Dies bist du dir wert:</h2>
+        <div class="calculation-result">
+          <p>Ausgewählte Stunden: {{ currentlySelectedHours }}</p>
+          <p>
+            Gesamtpreis:
+            {{ totalPrice | currency : "EUR" : "symbol" : "1.2-2" : "de" }}
+          </p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <button mat-flat-button class="custom-signal-button">Buchen</button>
+  </div>
+</section>
+<section>
+  <div class="section-wrapper">
+    <mat-slider class="mat-slider" min="1" max="65" step="1" showTickMarks discrete [displayWith]="formatLabel">
+      <input matSliderThumb>
+    </mat-slider>
+    <p>Ausgewählte Stunden: {{ selectedHours }}</p>
+          <p>
+            Gesamtpreis:
+            {{ priceInAll | currency : "EUR" : "symbol" : "1.2-2" : "de" }}
+          </p>
+  </div>
+</section>

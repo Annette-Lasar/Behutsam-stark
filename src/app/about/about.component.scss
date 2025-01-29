@@ -1,0 +1,79 @@
+@use "@angular/material" as mat;
+@use "../../scss-styles/themes/earthy-elegance-palette.scss" as palette;
+@import "../../scss-styles/variables.scss";
+@import "../../scss-styles/mixins.scss";
+
+section {
+  min-height: calc(100vh - $mobile-header-height - $mobile-footer-height);
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: mat.get-color-from-palette(
+    palette.$earthy-elegance-green-palette,
+    500
+  );
+}
+
+.section-wrapper {
+  padding: 1em 0.5em;
+  h1 {
+    text-align: center;
+    color: mat.get-color-from-palette(
+      palette.$earthy-elegance-lightbeige-palette,
+      500
+    );
+  }
+
+  .image-wrapper {
+    @include flex-container($justify: center);
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto 1em;
+    text-align: center;
+    img {
+      object-fit: cover;
+    }
+  }
+  .text-wrapper {
+    margin: 0 0 1.5em;
+    color: mat.get-color-from-palette(
+      palette.$earthy-elegance-lightbeige-palette,
+      500
+    );
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
+    h2 {
+      margin: 1.5em 0 1em;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    p {
+      line-height: 1.2;
+    }
+    .unordered-list-first-order {
+      padding: 0 0 0 1em;
+      li {
+        list-style-type: disc;
+        line-height: 1.2;
+      }
+    }
+    .unordered-list-second-order {
+      padding: 0 0 0 1.2em;
+      li {
+        list-style-type: circle;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  .custom-signal-button {
+    display: block;
+    margin: 0 auto;
+    background-color: mat.get-color-from-palette(
+      palette.$earthy-elegance-brown-palette,
+      500
+    );
+    color: mat.get-contrast-color-from-palette(
+      palette.$earthy-elegance-brown-palette,
+      500
+    );
+  }
+}

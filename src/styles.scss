@@ -1,42 +1,174 @@
-@import './scss-styles/reset_stylesheet.scss';
-@import './scss-styles/variables.scss';
-@import './scss-styles/mixins.scss';
+@use "@angular/material" as mat;
+@use "./scss-styles/themes/earthy-elegance-palette.scss" as palette;
+@import "./scss-styles/reset_stylesheet.scss";
+@import "./scss-styles/variables.scss";
+@import "./scss-styles/mixins.scss";
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: $secondary-color;
+  font-family: "Roboto", sans-serif;
+  background-color: $secondary-color;
 }
 
 h1 {
-    margin: 1.5em 0 1em;
-    font-size: clamp(1.2rem, 2vw, 1.8rem);
-    font-weight: 700;
+  margin: 1.5em 0 1em;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  font-weight: 700;
 }
 
-/* * ::-webkit-scrollbar {
-    scrollbar-width: 16px;
-    scrollbar-track-color: $accent-color;
-    scrollbar-color: $secondary-color;
-} */
-
 *::-webkit-scrollbar {
-    width: 12px;
-  }
+  width: 12px;
+}
 
-  *::-webkit-scrollbar-track {
-    background: $secondary-color;
-  }
-  
-  *::-webkit-scrollbar-thumb {
-    background-color: $primary-color;
-    border-radius: 10px;
-    border: $primary-color 3px solid;
-  }
+*::-webkit-scrollbar-track {
+  background: $secondary-color;
+}
 
-
-/* html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+*::-webkit-scrollbar-thumb {
+  background-color: $primary-color;
+  border-radius: 10px;
+  border: $primary-color 3px solid;
+}
 
 p {
-    margin: 0;
+  margin: 0;
+}
+
+.mat-mdc-menu-panel {
+  background: mat.get-color-from-palette(
+    palette.$earthy-elegance-lightbeige-palette,
+    100
+  ) !important;
+}
+
+/* mat-form-field {
+  --mdc-outlined-text-field-container-height: 36px;
+  font-size: 14px;
+}
+
+.mat-mdc-form-field {
+  height: 36px;
+}
+
+.mat-mdc-form-field-flex {
+  min-height: 36px;
+  padding-top: 0px;
+}
+
+.mat-mdc-text-field-wrapper {
+  height: 36px;
+}
+
+.mat-mdc-form-field-infix {
+  padding: 4px 0px;
+}
+
+input.mat-mdc-input-element,
+textarea.mat-mdc-input-element {
+  height: 24px;
+  padding: 0 8px;
+}
+
+.mat-mdc-form-field-label {
+  color: mat.get-color-from-palette(
+    palette.$earthy-elegance-lightbeige-palette,
+    500
+  ) !important;
+  opacity: 1 !important;
+}
+
+.mat-mdc-form-field.mdc-text-field--focused .mat-mdc-form-field-label,
+.mat-mdc-form-field.mdc-text-field--filled .mat-mdc-form-field-label {
+  color: mat.get-color-from-palette(
+    palette.$earthy-elegance-lightbeige-palette,
+    500
+  ) !important;
+}
+
+.mat-mdc-form-field:not(.mdc-text-field--focused):not(.mdc-text-field--filled)
+  .mat-mdc-form-field-label {
+  color: mat.get-color-from-palette(
+    palette.$earthy-elegance-lightbeige-palette,
+    500
+  ) !important;
+}
+
+.mat-mdc-input-element::placeholder {
+  color: mat.get-color-from-palette(
+    palette.$earthy-elegance-lightbeige-palette,
+    500
+  ) !important;
+} */
+
+mat-form-field {
+  --mdc-outlined-text-field-container-height: 36px;
+  font-size: 14px;
+}
+
+.mat-mdc-form-field {
+  height: 36px;
+}
+
+.mat-mdc-form-field-flex {
+  min-height: 36px;
+  padding-top: 0px;
+}
+
+.mat-mdc-text-field-wrapper {
+  height: 36px;
+}
+
+.mat-mdc-form-field-infix {
+  padding: 4px 0px;
+}
+
+input.mat-mdc-input-element,
+textarea.mat-mdc-input-element {
+  height: 24px;
+  padding: 0 8px;
+}
+
+.mat-mdc-form-field-label {
+  color: mat.get-color-from-palette(
+    palette.$earthy-elegance-lightbeige-palette,
+    500
+  ) !important;
+  opacity: 1 !important;
+}
+
+.mat-mdc-form-field.mdc-text-field--focused .mat-mdc-form-field-label,
+.mat-mdc-form-field.mdc-text-field--filled .mat-mdc-form-field-label {
+  color: mat.get-color-from-palette(
+    palette.$earthy-elegance-lightbeige-palette,
+    500
+  ) !important;
+}
+
+.mat-mdc-form-field:not(.mdc-text-field--focused):not(.mdc-text-field--filled)
+  .mat-mdc-form-field-label {
+  color: mat.get-color-from-palette(
+    palette.$earthy-elegance-lightbeige-palette,
+    500
+  ) !important;
+}
+
+.mat-mdc-form-field:not(.mdc-text-field--focused):not(.mdc-text-field--filled)
+  .mat-mdc-floating-label {
+  color: mat.get-color-from-palette(
+    palette.$earthy-elegance-lightbeige-palette,
+    500
+  ) !important;
+}
+
+.mat-mdc-input-element::placeholder {
+  color: mat.get-color-from-palette(
+    palette.$earthy-elegance-lightbeige-palette,
+    500
+  ) !important;
+}
+
+.mat-mdc-form-field {
+  --mdc-outlined-text-field-outline-color: #{mat.get-color-from-palette(
+      palette.$earthy-elegance-lightbeige-palette,
+      500
+    )} !important;
 }
